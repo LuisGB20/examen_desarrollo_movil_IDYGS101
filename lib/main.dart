@@ -46,6 +46,9 @@ class _LogicScreenState extends State<_LogicScreen> {
         cambio = 0;
         return;
       }
+      if((cantidadPasajeros + cambio) < 0){
+        return;
+      }
       cantidadPasajeros += cambio;
       if (cantidadPasajeros < 0) cantidadPasajeros = 0;
       historialPasajeros.insert(0 ,
